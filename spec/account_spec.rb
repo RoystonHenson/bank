@@ -7,6 +7,10 @@ require 'account'
         it 'with a starting balance of 0' do
           expect(subject.balance).to eq(0)
         end
+
+        it 'with an empty account history' do
+          expect(subject.history).to eq([])
+        end
       end
 
       describe '#deposit' do
