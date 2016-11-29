@@ -15,4 +15,12 @@ require 'account'
           expect(subject.balance).to eq(1000)
         end
       end
+
+      describe '#withdraw' do
+        it 'removes withdrawl amount from account balance' do
+          subject.deposit(1000)
+          subject.withdraw(600)
+          expect(subject.balance).to eq(400)
+        end
+      end
   end
